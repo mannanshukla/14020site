@@ -4,22 +4,32 @@ html{
     background-color: rgb(63, 63, 62);
 }
 
-body{
+.wrapper{
     background-color: red;
     color: white;
-
-}
-
-.content{
     box-shadow: 0 0 10px 5px rgb(20, 20, 20);
 }
 
-.text{
+.wrapper2{
+    background-color: red;
+    color: white;
+    box-shadow: 0 0 10px 5px rgb(20, 20, 20);
+    padding: 2px;
+}
+
+.wordmark{
     text-align: center;
     padding-top: 10px;
     margin-bottom: 7px;
     font-family: 'Raleway', sans-serif;
     font-size: 50px;
+}
+
+
+.text{
+    font-family: 'Raleway', sans-serif;
+    padding-left: 10px;
+    font-size: 20px;
 }
 
 .thing{
@@ -33,11 +43,34 @@ nav{
     padding: 5px;
     text-align: center;
     font-size: 20px;
+    padding-bottom: 20px;
 }
 
 .links:hover{
-    font-size: 30px;
     font-weight: bold;
-
 }
+
+ /* unvisited link */
+ a:link {
+    color:white;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color:white;
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color:white;
+    text-decoration: none;
+  }
+  
+  /* selected link */
+  a:active {
+    color:white;
+    text-decoration: none;
+  } 
 
