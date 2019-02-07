@@ -11,7 +11,7 @@ html{
 }
 
 .wrapper2{
-    background-color: red;
+    background-color: #ff5131;
     color: white;
     box-shadow: 0 0 10px 5px rgb(20, 20, 20);
     padding: 2px;
@@ -28,8 +28,15 @@ html{
 
 .text{
     font-family: 'Raleway', sans-serif;
-    padding-left: 10px;
+    padding: 10px;
     font-size: 20px;
+}
+
+.largeText{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 5px;
 }
 
 .thing{
