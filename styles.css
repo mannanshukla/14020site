@@ -78,3 +78,15 @@ nav{
     text-decoration: none;
   } 
 
+.lel {
+	height: 50px;
+	width:  50px;
+	padding-right: 7px;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+}
+
+
