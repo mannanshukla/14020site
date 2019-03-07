@@ -1,17 +1,17 @@
 html{
     margin-left: 10%;
     margin-right: 10%;
-    background-color: #039be5;
+    background-color: #263238;
 }
 
 .wrapper{
-    background-color: #ffeb3b;
+    background-color: #d50000;
     color: #000000;
     box-shadow: 0 0 10px 5px rgb(20, 20, 20);
 }
 
 .wrapper2{
-    background-color: #ffff72;
+    background-color: #d32f2f;
     color: #000000;
     box-shadow: 0 0 10px 5px rgb(20, 20, 20);
     padding: 2px;
@@ -87,6 +87,17 @@ nav{
 a {
 	text-decoration: none;
 	color: #000;
+}
+
+.port{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.smallText{
+    font-family: 'Raleway', sans-serif;
+    padding: 5px;
+    font-size: 15px;
 }
 
 
