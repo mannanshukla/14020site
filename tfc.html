@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
+    <title>Mannan Shukla | Tensorflow Checkpoint</title>
+</head>
+<body>
+<div class = "wrapper">
+    <p class = "wordmark"> <a href = "index.html">Mannan Shukla</a></p>
+    <nav>
+        <a href = "myself.html" class = "links">About Myself</a>
+        <a class = "thing">|</a>
+        <a href = "tech.html"  class = "links">My Favorite Tech</a>
+        <a class = "thing">|</a>
+        <a href = "ftc.html"  class = "links">FTC Portfolio</a>
+        <a class = "thing">|</a>
+        <a href = "gallery.html"  class = "links"> Gallery </a>
+    </nav>
+</div>
+<br>
+<br>
+<br>
+
+<div class = "wrapper2">
+    <p class = "largeText">Tensorflow Run and Checkpoint:</p>
+    <p class = "text">
+        While we did have an accurate way of finding the angle of the gold mineral, what we didn't have was
+        a way to ensure that we always hit the gold mineral 100% of the time. Most of these problems stem from
+        not having a way to see all 3 minerals at a time, and interference from other robots. To make sure that we
+        are always on track, we used the <em>Tensorflow Checkpoint</em> system. This was a system all based on predefined
+        measurements from the field, and using the Tensorflow Scan system to find the gold minerals angle. The calculation process
+        could actually be repeated many times, so that we always return the right angle. <br><br>
+
+        We had many ideas before Tensorflow Checkpoint to potentially solve the issue of not always being able to see the gold mineral.
+        One solution was to move the robots side to side until it happened to see the gold mineral. This approach does work, however it
+        is really slow and the robot might move too fast, not giving time to Tensorflow Scan to be able to see find the gold angle, or changing
+        the angle of the robot itself at too high of a speed. <br><br>
+
+        Tensorflow Checkpoint was chosen for its simplicity, and that is reflected in the Initial Brainstorm document.
+        <br>
+    </p>
+    <div style="text-align: center;">
+        <p class = "text">Here is the Initial Brainstorm: <br></p>
+        <img alt="tfs board" height="50%" src="cp.png" width="50%">
+    </div>
+    <br><br>
+    <p class  = "text">
+        First we declare our constants. Since we have to account for getting to the minerals from the lander, we calculate the distance
+        from the lander to the minerals, this is expressed as <em>T</em>. Then we need to give the robot some space to be able to turn
+        without hitting the legs of the lander, this is why we need an Initial drive out for clearance. This is known as <em>I</em>. After that,
+        we need to account for the length of the robot itself, in our case, this was almost 17 inches. This is known as <em>R</em>. Then, we define
+        our methods, in this case it would be just returning the gold angle using a methodized version of Tensorflow Scan. After that, we calculate
+        our drive sequences by subtracting <em>T</em> by <em>I</em> and <em>R</em>. We then multiply this by a "fudge factor" which we can tune ourselves
+        this allows us to go the little distance needed to <em>knock</em> the gold mineral. We divide the value by the total amount of checks we want.
+        <br><br>
+    </p>
+    <div style="text-align: center;">
+        <p class = "text">Here is a demo: <br></p>
+        <video controls height="90%" src="tfrunfinal.mp4" type="video/mp4" width="90%"> </video>
+        <p class = "text">The code is a bit on the long side, so here is a <em><a href="https://hastebin.com/kubumeyake.java">hastebin link</a></em>: <br></p>
+    </div>
+</div>
+<br>
+<br>
+</body>
+</html>
