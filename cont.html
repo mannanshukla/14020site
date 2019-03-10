@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
+    <title>Mannan Shukla | Tensorflow Checkpoint</title>
+</head>
+<body>
+<div class = "wrapper">
+    <p class = "wordmark"> <a href = "index.html">Mannan Shukla</a></p>
+    <nav>
+        <a href = "myself.html" class = "links">About Myself</a>
+        <a class = "thing">|</a>
+        <a href = "tech.html"  class = "links">My Favorite Tech</a>
+        <a class = "thing">|</a>
+        <a href = "ftc.html"  class = "links">FTC Portfolio</a>
+        <a class = "thing">|</a>
+        <a href = "gallery.html"  class = "links"> Gallery </a>
+    </nav>
+</div>
+<br>
+<br>
+<br>
+
+<div class = "wrapper2">
+    <p class = "largeText">Control System Basics:</p>
+    <p class = "text">
+       As a freshman, I had to learn some of the ways we can make our drive train control more robust and less prone to outside
+        disturbances the goal was to understand feedback control loop systems and gains to optimize our turning and
+        have a robust drive system. <br><br>
+
+        it is called a feedback control loop because our error is always fed back into the equations that we use to figure
+        out how much power we need to give to the motors. The green box represents the robot, the green arrow coming from it
+        represents the actual turn degree that the robot is using, this is referred to as the actual value.
+        The brown arrow represents where we actually want to go in degrees, this will be referred to as the desired value.
+        We find the error value or the change by subtracting the the desired value from the actual value.
+        The Kp value represents the turning coefficient, if the value is greater then the turns will be faster,
+        but the tradeoff is that we run the risk of overshooting and missing our target angle. If we have the turning
+        coefficient too low however, than we run the risk of going so slow that we may never be able to hit the
+        target thanks to forces such as friction on the <br> <br>
+
+        One last important thing is that we assume through convention that the rightward direction indicates positive direction.
+        The motor power that we set is the Kp turning coefficient multiplied by the error. Say that our desired angle is 0 a
+        nd we need to go 5 that means we have an error of -5. This means that we need to spin to the left, or that we need to
+        spin the right motors forward and the left motors back. This means we have our delta Pr value with a (-) at the front,
+        the (-) and the negative error will cancel out leaving us with a positive right motor value.
+        This concludes the preliminary explanation of the feedback control loop system. <br><br>
+
+        We implemented this feedback loop into our gyro sensor, using a proportional controller to have accurate turning using
+        this feedback loop.
+        <br>
+        <br>
+    </p>
+    <div style="text-align: center;">
+        <p class = "text">Here is the Initial Explanation: <br></p>
+        <img alt="cont board" height="50%" src="cont.png" width="50%">
+        <p class = "text">And here is a snippet of where we use it: <br></p>
+        <img alt="cont ex" height="50%" src="contex.png" width="50%">
+        <p class = "text">Lastly, here is a short demo of the gyro turning: <br></p>
+        <video controls height="90%" src="gyrofinal.mp4" type="video/mp4" width="90%"> </video>
+    </div>
+    <br><br>
+
+</div>
+<br>
+<br>
+</body>
+</html>
