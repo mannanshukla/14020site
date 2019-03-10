@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <script src='http://127.0.0.1:9001/js/socket.js'></script>
+
+    <title>Mannan Shukla | Tensorflow Scan</title>
+</head>
+<body>
+<div class = "wrapper">
+    <p class = "wordmark"> <a href = "index.html">Mannan Shukla</p>
+    <nav>
+        <a href = "myself.html" class = "links">About Myself</a>
+        <a class = "thing">|</a>
+        <a href = "tech.html"  class = "links">My Favorite Tech</a>
+        <a class = "thing">|</a>
+        <a href = "ftc.html"  class = "links">FTC Portfolio</a>
+        <a class = "thing">|</a>
+        <a href = "gallery.html"  class = "links"> Gallery </a>
+    </nav>
+</div>
+<br>
+<br>
+<br>
+
+<div class = "wrapper2">
+    <p class = "largeText">Tensorflow Scan:</p>
+
+    <p class = "text">The 25 point sampling mission was very crucial to maximizing auton, we had to find the gold mineral fast and
+                      and find it every time. Some ways we thought about finding the mineral were using a color sensor that would detect
+                      the colors of every mineral one by one. This would be inefficient however, because the robot would have to look at
+                      each mineral one by one. <br> <br>
+
+                      The FTC SDK actually provides a Tensorflow Lite model that has already been trained to tell the difference between the Gold and
+                      Silver minerals. Not only does this make the process much faster, but it also won't get confused when shown other object with the same colors.
+                      The Tensorflow library also lets us get pixel values on each object. The Tensorflow scanning process counts all of the recognitions the engine finds
+                      and puts it into an arraylist. Then its puts a label of either GOLD_MINERAL or SILVER_MINERAL which we can read when looping through. After these pixel values on
+                      the objects are found, we put them through our pixel to angle logic. <br> <br>
+
+                      Once the webcam sees the gold mineral, we find the left and right pixel values, then average them. Then we find half the horizontal pixel axis, which is 400 pixels.
+                      We then find the difference between the object pixel value and half the axis. We save this value. We then create a ratio of the field of view (in this case its 70 degrees)
+                      and the total amount of pixels in the y axis, which would be 800. Then we multiply the saved value of the difference and the ratio we already found. This returns an angle. We feed 
+                      it to the gyro and turn to the gold mineral. <br><br>
+        
+                      Here is a demo:
+    </p>
+    <video src="tfscan.mp4" width = 90% height = 90%></video>
+</div>
+<br>
+<br>
+</body>
+</html>
+
