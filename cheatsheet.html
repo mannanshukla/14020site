@@ -79,9 +79,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <![endif]-->
 </head>
 <body>
+<link hrf="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet"> <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet"><br />
+
+<style>
+body{
+background-color: #f2f2f2;
+}
+p{
+color:#262424;
+font-family: 'Source Sans Pro', sans-serif;
+}
+h1, h2, h3, h4{
+color:#262424;
+font-family: 'Didact Gothic', sans-serif;
+}
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+</style>
 <h1 id="my-python-cheatsheet">My Python Cheatsheet!</h1>
-<p>I used sentdex’s tutorials</p>
-<p>Also using google’s tutorials</p>
 <p>find google’s <a href="https://developers.google.com/edu/python/">here</a></p>
 <p>find sentdex <a href="https://pythonprogramming.net">here</a></p>
 <h2 id="what-exactly-is-python">What Exactly is Python?</h2>
@@ -150,9 +171,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <a class="sourceLine" id="cb12-3" title="3">    <span class="bu">print</span> repeat(<span class="st">&#39;Woo Hoo&#39;</span>, <span class="va">True</span>)   <span class="co">## Woo HooWoo HooWoo Hoo!!!</span></a></code></pre></div>
 <blockquote>
 <p>note: python does very little checking at compile time</p>
-</blockquote>
-<blockquote>
-<p>and more at runtime.</p>
 </blockquote>
 <h4 id="the-len-function">the len() function</h4>
 <p>this will return the length of a string</p>
